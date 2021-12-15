@@ -4,14 +4,14 @@
     <title>Free Adidas Website Template | Home :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="{{asset('assets/Client/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset('assets/Clients/css/form.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <link href={{asset('assets/Client/css/style.css')}} rel="stylesheet" type="text/css" media="all" />
+    <link href={{asset('assets/Client/css/form.css')}} rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{{asset('assets/Clients/js/jquery.min.js'}}"></script>
+    <script type="text/javascript" src={{asset('assets/Client/js/jquery.min.js')}}></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.6.0/jquery.marquee.min.js"></script>
 
     <script type="text/javascript">
@@ -46,11 +46,11 @@
         });
     </script>
     <!-- start menu -->
-    <link href="{{asset('assets/Clients/css/megamenu.css'}}" rel="stylesheet" type="text/css" media="all" />
-    <script type="text/javascript" src="{{asset('assets/Clients/js/megamenu.js'}}"></script>
+    <link href="{{asset('assets/Client/css/megamenu.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="{{asset('assets/Client/js/megamenu.js')}}"></script>
     <script>$(document).ready(function () { $(".megamenu").megamenu(); });</script>
     <!-- end menu -->
-    <script type="text/javascript" src="{{asset('assets/Clients/js/jquery.jscrollpane.min.js'}}"></script>
+    <script type="text/javascript" src="{{asset('assets/Client/js/jquery.jscrollpane.min.js')}}"></script>
     <script type="text/javascript" id="sourcecode">
         $(function () {
             $('.scroll-pane').jScrollPane();
@@ -58,8 +58,8 @@
     </script>
     <!----details-product-slider--->
     <!-- Include the Etalage files -->
-    <link rel="stylesheet" href="./resources/Clients/css/etalage.css">
-    <script src="{{asset('assets/Clients/js/jquery.etalage.min.js'}}"></script>
+    <link rel="stylesheet" href="{{asset('assets/Client/css/etalage.css')}}">
+    <script src="{{asset('assets/Client/js/jquery.etalage.min.js')}}"></script>
     <!-- Include the Etalage files -->
     <script>
         jQuery(document).ready(function ($) {
@@ -82,8 +82,8 @@
     </script>
     <!----//details-product-slider--->
     <!-- top scrolling -->
-    <script type="text/javascript" src="{{asset('assets/Clients/js/move-top.js'}}"></script>
-    <script type="text/javascript" src="{{asset('assets/Clients/js/easing.js'}}"></script>
+    <script type="text/javascript" src="{{asset('assets/Client/js/move-top.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/Client/js/easing.js')}}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
@@ -97,21 +97,21 @@
     <div class="header-top mb-3 p-2">
         <div class="wrap d-flex justify-content-between" style="height: 45px">
             <div class="logo m-0">
-                <a href="{{route('client.home')}}" style="color: rebeccapurple; font-size: 31px; text-decoration: none; padding: 3px; border: 3px solid linen; box-shadow: 5px 10px orange;"><span class="text-danger">N</span>ew <span class="text-danger">S</span>tore</a>
+                <a href="" style="color: rebeccapurple; font-size: 31px; text-decoration: none; padding: 3px; border: 3px solid linen; box-shadow: 5px 10px orange;"><span class="text-danger">N</span>ew <span class="text-danger">S</span>tore</a>
             </div>
 
-            @using (Html.BeginForm("Search", "Home",FormMethod.Get, new { @class = "d-inline-flex" }))
-            {
-                <input type="search" id="form1" class="form-control" name="TenSP"/>
+           {{-- @using (Html.BeginForm("Search", "Home",FormMethod.Get, new { @class = "d-inline-flex" })) --}}
+            
+                <input type="search" id="form1" class="form-control" name="TenSP" style="width:56%" />
                 <button type="submit" class="btn btn-primary">Search</button>
-            }
+            
 
             <div class="cssmenu">
                 <ul>
-                    <li class="active">@Html.ActionLink("Sign up & Save", "Register", "Account")</li>
+                    <li class="active">{{-- @Html.ActionLink("Sign up & Save", "Register", "Account") --}}</li>
                     <li><a href="https://goo.gl/maps/yA6r1vp8LVpPF2Va8">Store Locator</a></li>
-                    <li>@Html.ActionLink("My Account", "Login", "Account")</li>
-                    <li><a href=@Url.Action("Index","Cart")>CheckOut</a></li>
+                    <li{{-- >@Html.ActionLink("My Account", "Login", "Account") --}}</li>
+                    <li><a href=>Giỏ Hàng</li>
                 </ul>
             </div>
 
@@ -119,7 +119,7 @@
     </div>
     <div class="header-bottom" style="background: orange">
         <div class="wrap">
-            @{Html.RenderAction("MenuPartial","Home");}
+           {{--  //@{Html.RenderAction("MenuPartial","Home");} --}}
         </div>
     </div>
     <!--Content-->
@@ -273,7 +273,7 @@
         });
     </script>
     <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
-    @RenderSection("Jquery", required: false)
+   {{--  //@RenderSection("Jquery", required: false) --}}
     <script type="text/javascript">
 
         
